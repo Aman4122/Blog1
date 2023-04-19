@@ -2,6 +2,8 @@ import { url } from "../../url";
 import * as types from "./actionTypes";
 import axios from "axios";
 
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*'
+
 const getDataRequest = () => {
   return {
     type: types.GET_DATA_REQUEST,

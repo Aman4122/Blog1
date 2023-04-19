@@ -6,7 +6,7 @@ const { user } = require("./routes/user.route");
 const { blogs } = require("./routes/blogs.route");
 const { comments } = require("./routes/comment.route");
 const cloudinary = require("cloudinary");
-app.listen(8080, async () => {
+app.listen(8000, async () => {
   try {
     await connection;
     console.log("connected to db and listening on port 8000");
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Relatioships");
+  res.send("Blog1 Api is Running Smoothly! Do Check Out my Project");
 });
 
 

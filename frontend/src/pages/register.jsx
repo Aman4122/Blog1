@@ -193,7 +193,7 @@ export default function Register() {
           <Center>
             <FormControl>
               <FormLabel bg={"blue.300"} rounded="md" p={2} width="fit-content">
-                Upload a profile pricture
+                Upload a profile picture
                 <Input
                   onChange={(e) => setImg(e.target.files[0])}
                   display={"none"}
