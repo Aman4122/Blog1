@@ -6,7 +6,7 @@ const { user } = require("./routes/user.route");
 const { blogs } = require("./routes/blogs.route");
 const { comments } = require("./routes/comment.route");
 const cloudinary = require("cloudinary");
-app.listen(8000, async () => {
+app.listen(process.env.PORT || 8000, async () => {
   try {
     await connection;
     console.log("connected to db and listening on port 8000");
