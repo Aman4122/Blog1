@@ -59,8 +59,6 @@ user.post("/login", async (req, res) => {
         res.status(200).send({ msg: "Login successfull", token, userData });
       } else res.status(400).send({ msg: "Wrong Password" });
     });
-    // console.log(password);
-    // res.send("tesing login sucess");
   } catch (err) {
     console.log(err);
     console.log(err.message);
@@ -69,7 +67,6 @@ user.post("/login", async (req, res) => {
 });
 
 user.patch("/update/:id", upload.single("profile_photo"), async (req, res) => {
-  // console.log("update");
   let { id } = req.params;
   let payload = req.body;
   if (req.file) {
@@ -90,7 +87,6 @@ user.patch("/update/:id", upload.single("profile_photo"), async (req, res) => {
         useFindAndModify: true,
       }
     );
-    // console.log("updated succesfuul");
     res.status(200).send(result);
   } catch (err) {
     console.log(err.message);
@@ -100,7 +96,6 @@ user.patch("/update/:id", upload.single("profile_photo"), async (req, res) => {
 
 user.get("/profile/:user_id", async (req, res) => {
   let { user_id } = req.params;
-  // console.log(password)
   try {
     let result = await UserModel.findOne({
       _id: user_id,
