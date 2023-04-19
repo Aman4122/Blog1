@@ -32,7 +32,6 @@ export default function Register() {
   const Email = useRef(null);
   const Password = useRef(null);
   const [img, setImg] = useState("");
-  // console.log(img);
   const [isLoading, setLoading] = useState(false);
   async function handelSubmit() {
     let name = Name.current.value;
@@ -40,7 +39,6 @@ export default function Register() {
     let password = Password.current.value;
     if (name && email && password && img) {
       setLoading(true);
-      // setLoading(false);
       const formData = new FormData();
       formData.append("name", name);
       formData.append("email", email);
@@ -50,10 +48,8 @@ export default function Register() {
         name,
         email,
         password,
-        // profile_photo
       };
       let result = await dispatch(register(formData));
-      // console.log(result);
       let { res, msg } = result;
       if (res) {
         setLoading(false);
@@ -79,7 +75,7 @@ export default function Register() {
       }
     } else {
       toast({
-        title: "Empty Filed is not allowed",
+        title: "Empty Field is not allowed",
         position: "top",
         status: "warning",
         duration: 3000,
@@ -93,9 +89,7 @@ export default function Register() {
       display="flex"
       justify="center"
       alignItems="center"
-      // h="100vh"
       w="100vw"
-      // bgGradient="linear(to-r,#b70ef0,#15a9e8)"
     >
       <Container
         border={"1px solid gray"}
@@ -207,14 +201,11 @@ export default function Register() {
               isLoading={isLoading}
               onClick={() => handelSubmit()}
               rounded="md"
-              // size="sm"
               fontSize="sm"
               textTransform="capitalize"
-              // w="50%"
               w="full"
               textAlign="center"
               colorScheme="twitter"
-              // bgGradient="linear(to-l, #7928CA, #FF0080)"
             >
               Create Account
             </Button>
@@ -222,12 +213,10 @@ export default function Register() {
 
           <VStack>
             <Text
-              // bgGradient="linear(to-l, #7928CA, #FF0080)"
-              // bgClip="text"
               fontSize="sm"
               fontWeight="extrabold"
             >
-              Allready have an account?
+              Already have an account?
             </Text>
             <Text fontSize="xl">&#128071;</Text>
           </VStack>
@@ -235,10 +224,8 @@ export default function Register() {
             <Center>
               <Button
                 rounded="md"
-                // size="sm"
                 fontSize="sm"
                 textTransform="capitalize"
-                // w="50%"
                 w="full"
                 textAlign="center"
                 colorScheme="whatsapp"

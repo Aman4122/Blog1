@@ -1,7 +1,7 @@
 const cloudinary = require("cloudinary");
 require("dotenv").config();
 cloudinary.config({
-  cloud_name: "dl4pcd6ok",
-  api_key: "592793542225265",
-  api_secret: "rerHVe48TzvA0iUdOY5LtFLruDU",
+  cloud_name: "ddh4iyydzc",
+  api_key: "819377753494661",
+  api_secret: "vexeO1AJ1zQ5ghtxRllU2-vxgMc",
 });

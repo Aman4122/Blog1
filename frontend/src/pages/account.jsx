@@ -126,7 +126,7 @@ export default function Account() {
               {" "}
               <SettingsIcon /> <Heading size="md">Account settings</Heading>
             </HStack>
-            <Heading size="md">Profile Photo</Heading>
+            <Heading size="md">Display Picture</Heading>
 
             <Center>
               <Avatar
@@ -151,7 +151,7 @@ export default function Account() {
                 <FormLabel>Email</FormLabel>
                 <Tooltip
                   hasArrow
-                  label="Email Connot be changed"
+                  label="Email Cannot be changed"
                   aria-label="A tooltip"
                 >
                   <Input
@@ -179,7 +179,7 @@ export default function Account() {
                   cursor="pointer"
                   rounded="5px"
                 >
-                  Change Profile photo
+                  Change Display Picture
                   <Input
                     type="file"
                     display={"none"}

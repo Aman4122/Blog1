@@ -20,7 +20,6 @@ user.post("/register", upload.single("profile_photo"), async (req, res) => {
         if (!secure_url)
           secure_url =
             "https://www.vhv.rs/dpng/d/15-155087_dummy-image-of-user-hd-png-download.png";
-        // payload.photo = secure_url;
         let newUser = await UserModel.create({
           photo: secure_url,
           name,
@@ -30,7 +29,7 @@ user.post("/register", upload.single("profile_photo"), async (req, res) => {
         res.status(200).send({ msg: "Registration successfull", newUser });
       } catch (err) {
         console.log(err.message);
-        res.status(400).send({ msg: "User allready present please login" });
+        res.status(400).send({ msg: "User already present please login" });
       }
     });
   } catch (err) {
@@ -46,7 +45,6 @@ user.post("/register", upload.single("profile_photo"), async (req, res) => {
 
 user.post("/login", async (req, res) => {
   let { email, password } = req.body;
-  // console.log(password)
   try {
     const { password: hashedPassword, _id } = await UserModel.findOne({
       email,
@@ -54,14 +52,9 @@ user.post("/login", async (req, res) => {
     let userData = await UserModel.find({
       _id,
     });
-    // console.log(password, hashedPassword);
     bcrypt.compare(password, hashedPassword, function (err, result) {
-      // result == true
-      // console.log(err);
-      // res.send("testng");
       if (result) {
         var token = jwt.sign({ user_id: _id }, "blue");
-        // console.log(token);
 
         res.status(200).send({ msg: "Login successfull", token, userData });
       } else res.status(400).send({ msg: "Wrong Password" });

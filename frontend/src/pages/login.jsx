@@ -78,9 +78,7 @@ export default function Login() {
       display="flex"
       justify="center"
       alignItems="center"
-      // h="100vh"
       w="100vw"
-      // bgGradient="linear(to-r,#b70ef0,#15a9e8)"
     >
       <Container
         border={"1px solid gray"}
@@ -162,10 +160,8 @@ export default function Login() {
               isLoading={isLoading}
               onClick={() => handelSubmit()}
               rounded="full"
-              // size="sm"
               fontSize="sm"
               textTransform="capitalize"
-              // w="50%"
               w="full"
               textAlign="center"
               colorScheme="whatsapp"
@@ -176,8 +172,6 @@ export default function Login() {
 
           <VStack>
             <Text
-              // bgGradient="linear(to-l, #7928CA, #FF0080)"
-              // bgClip="text"
               fontSize="sm"
               fontWeight="extrabold"
             >
@@ -186,18 +180,15 @@ export default function Login() {
             <Text fontSize="xl">&#128071;</Text>
           </VStack>
 
-          <Link to="/signup">
+          <Link to="/Signup">
             <Center>
               <Button
                 rounded="full"
-                // size="sm"
                 fontSize="sm"
                 textTransform="capitalize"
-                // w="50%"
                 w="full"
                 textAlign="center"
                 colorScheme="twitter"
-                // bgGradient="linear(to-l, #7928CA, #FF0080)"
               >
                 Register
               </Button>
