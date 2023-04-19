@@ -48,7 +48,7 @@ export default function Navbar() {
                 src="https://res.cloudinary.com/doaedvl5s/image/upload/v1680167039/lyredncxehdefxt5jx29.png"
               />
               <Text color={"white"} fontSize={"sm"}>
-                Notify me.
+                Script savvy
               </Text>
             </Flex>
           </Link>
