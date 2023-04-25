@@ -37,7 +37,7 @@ export default function Navbar() {
         h="70px"
         align="center"
         w="full"
-        // bgGradient="linear(to-l,#7fc9df,#d038eb,#7fc9df)"
+        
         bg="#1a202c"
       >
         <Box>
